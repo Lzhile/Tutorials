@@ -9,6 +9,10 @@ public class Graph : MonoBehaviour
     [SerializeField, Range(10, 100)]
     int resolution = 10;
 
+    //[SerializeField, Range(0, 2)]
+    [SerializeField]
+    FunctionLibrary.FunctionName function = default;
+
     Transform[] points;
 
     void Awake()
@@ -39,12 +43,25 @@ public class Graph : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FunctionLibrary.Function f = FunctionLibrary.GetFunction(function);
         float time = Time.time;
         for (int i = 0; i < points.Length; i++)
         {
             Transform point = points[i];
             Vector3 position = point.localPosition;
-            position.y = Mathf.Sin(Mathf.PI * (position.x + time / 5));
+            //if (function==0)
+            //{
+            //    position.y = FunctionLibrary.Wave(position.x, time);
+            //}
+            //else if(function==1)
+            //{
+            //    position.y = FunctionLibrary.MultiWave(position.x, time);
+            //}
+            //else
+            //{
+            //    position.y = FunctionLibrary.Ripple(position.x, time);
+            //}
+            position.y = f(position.x, time);
             point.localPosition = position;
         }
     }
