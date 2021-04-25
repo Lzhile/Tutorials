@@ -14,6 +14,8 @@ public static class FunctionLibrary
         return functions[(int)name];
     }
 
+    public static int FunctionCount => functions.Length;
+
     public static Vector3 Wave(float u, float v, float t)
     {
         Vector3 p;

@@ -802,14 +802,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d3ee7e5f0d4304cacfc15699c0a108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 200
+  resolution: 1000
   function: 4
   computeShader: {fileID: 7200000, guid: 4e9c3cda080a6324284f3f5e8d1d4e47, type: 3}
-  material: {fileID: 2100000, guid: 0f1a42d17074275409a29fd7c3760dee, type: 2}
+  material: {fileID: 2100000, guid: f3749767b493c3a43b5b3a855e721a82, type: 2}
   mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   transitionMode: 0
   functionDuration: 1
-  transitionDuration: 0
+  transitionDuration: 1
 --- !u!4 &2038523258
 Transform:
   m_ObjectHideFlags: 0
